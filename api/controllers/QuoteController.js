@@ -10,8 +10,14 @@ const scrapeIt = require("scrape-it");
 
 module.exports = {
   quotes: async function (req, res) {
-    const { page, per_page } = req.query
-    let quotes = await Quote.find().skip(page * per_page).limit(per_page).populate('author').populate('category')
+    const { page, per_page, category } = req.query
+    var quotes = []
+    if (category != undefined) {
+      quotes = await Quote.find({ where: { category } }).skip(page * per_page).limit(per_page).populate('author').populate('category')
+    } else {
+      quotes = await Quote.find().skip(page * per_page).limit(per_page).populate('author').populate('category')
+
+    }
     return res.ok(quotes)
   },
   top_view_quotes: async function (req, res) {
@@ -20,10 +26,6 @@ module.exports = {
   },
   author: async function (req, res) {
     let quotes = await Author.find()
-    return res.ok(quotes)
-  },
-  category: async function (req, res) {
-    let quotes = await Category.find()
     return res.ok(quotes)
   },
   mark_view: async function (req, res) {
