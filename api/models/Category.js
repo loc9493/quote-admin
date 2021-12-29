@@ -30,6 +30,9 @@ module.exports = {
     url: {
       type: 'string',
     },
+    imageUrl: {
+      type: 'string',
+    },
     quotes: {
       collection: 'quote',
       via: 'category'
