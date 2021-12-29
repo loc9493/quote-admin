@@ -49,7 +49,7 @@ module.exports = {
     default: {
       // adapter: 'sails-mysql',
       // url: 'mysql://user:password@host:port/database',
-      url: 'mysql://locngaco_quote:MinMin2021@172.96.191.17:3306/locngaco_quote',
+      url: 'mysql://loc:#B4j9mc3@172.96.191.17:3306/otakulog_mysql',
       //--------------------------------------------------------------------------
       //  /\   To avoid checking it in to version control, you might opt to set
       //  ||   sensitive credentials like `url` using an environment variable.
