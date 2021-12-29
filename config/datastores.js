@@ -48,13 +48,17 @@ module.exports.datastores = {
     *    (See https://sailsjs.com/config/datastores for help.)                 *
     *                                                                          *
     ***************************************************************************/
-    adapter: require('sails-mysql'),
+    adapter: 'sails-mysql',
+    host: '103.9.157.197',
+    port: 3306,
+    user: 'loc',
+    password: '#B4j9mc3',
+    database: 'otakulog_mysql',
 
-    url: 'mysql://root:root@127.0.0.1:3306/quote',
+    // url: 'mysql://root:root@127.0.0.1:3306/quote',
     // url: 'mysql://ubuntu:MinMin_2021@192.168.1.102:3306/quote',
-    // host: '103.9.157.197',
     // url: 'mysql://loc1:#B4j9mc3@172.96.191.17:3306/otakulog_mysql',
-    // url: 'mysql://loc:#B4j9mc3@103.9.157.197:3306/otakulog_mysql',
+    url: 'mysql://103.9.157.197:3306/otakulog_mysql',
 
 
   },
